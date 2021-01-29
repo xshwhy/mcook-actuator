@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: mcook-acyuator
+  boot:
+    admin:
+      client:
+        url: http://localhost:9998
+        instance:
+          prefer-ip: true # 使用ip注册
+
+server:
+  port: 9999
+
+
+
+
+
+
+
+
+
+
+
+
+# management 是所有actuator的配置
+# endpoint.端点.xxx 对某个端点的具体配置
+management:
+  endpoints:
+    enabled-by-default: true  # 默认开启所有监控端点
+    web:
+      exposure:
+        include: '*'  # 以web方式暴露所有端点
+  endpoint:
+    health:
+      show-details: always
+#      enabled: true
+#    info:
+#      enabled: true
+#    beans:
+#      enabled: true
+#    metrics:
+#      enabled: true
+
