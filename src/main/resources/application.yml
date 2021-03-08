@@ -1,17 +1,18 @@
 spring:
   application:
-    name: mcook-acyuator
+    name: mcook-actuator
   boot:
     admin:
       client:
         url: http://localhost:9998
         instance:
           prefer-ip: true # 使用ip注册
+#  http:
+#    encoding:
+#      charset: GBK
 
 server:
   port: 9999
-
-
 
 
 
